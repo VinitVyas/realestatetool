@@ -1,2 +1,3 @@
 # realestatetool
-A tool that helps find real estate deals online.  
+1. Python version: 3.0
+2. Run cmd: python public_module.py
