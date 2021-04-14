@@ -1,0 +1,31 @@
+Background:
+There are many ways to earn using real estate like flipping homes, long term appreciation or even REITs. The aim is to create an income source using investing for renting. Home appreciation and flipping are a part of the equation, but are not the primary aim. 
+
+The issue with any home purchase is the emotional aspect. As thought of generally, it is not desirable, or even something reliable, especially because we have not done enough deals to get any intuition about it. It must always be treated as a problem. The best way to negate it is by doing the calculations that affirm the desirability. Any decision can be made thereafter. 
+
+The aim of this project is to provide all the calculations associated with a property thereby illustrating all the pros and cons, atleast as many as can be ascertained. 
+
+Now that we've established that, this means that analyzing any property is the most important step. And there are many calculators online that help with this. But none of them, I believe, are comprehensive enough. 
+
+
+
+Problem Statement:
+Analyzing a property is the most important step in the home purchasing phase. And the tools available online are not enough (the closest is the BP calculators, but can be only used for a limited number of times without paying).
+
+So we need a program that analyses properties. Not just by punching in the numbers, but is active enough to parse data from various websites and do the calculations, and then notify the users if an only if a deal has the 'minimum characteristics'. 
+Min characteristics include parameters like: 
+	- down-payment budget, 
+	- area, 
+	- cashflow is >= $100, 
+	- cash-on-cash earning is >=8%.
+It should be able to automate answer to question like, "Find me all the properties in Sac suburbs which require less than $50k for a 20% downpayment".
+
+
+
+Long-term goal/vision:
+At its final goal, this code should do the following:
+	- Become user friendly and stay personalized, unlike other calculators, by accepting user information like current budget and performing calculations w.r.t that. 
+	- Read sites like Redfin, Zillow, Realtor, etc and keep parsing them periodically, every few hours. Analyze new entries and do calculations on them. If it meets the 'parameters', notify users about the deal.
+	- Keep running 24x7x365 for these periodical updates. Maybe host the code somewhere as an app or site. 
+	- Provide analysis of various strategies, and not just rental investing, like BRRRR and flipping homes just for equity.
+	

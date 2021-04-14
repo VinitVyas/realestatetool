@@ -1,0 +1,26 @@
+TBD
+
+High level: 
+	- The app will have online and offline features. 
+	- Online would mean that it must be able to analyze new deals in the market and send notifications if they make sense as an investment. 
+	- Offline mode will include manual analysis of a property, financial calculators, etc.
+
+Online features:
+	- 3 types of calculators:
+		1. Renting calculations
+		2. BRRRR (buy, rehab, rent, refinance, repeat) calculations
+		3. Fix and flip calculations.
+	- Parsing various real estate sites. 
+	- Create excel/csv daily scans and analysis done by the bot.
+	- Upload said docs to the cloud. 
+
+Offline features:
+	- Finance calculations:
+		1. Mortgage numbers
+		2. Time to no-PMI
+		3. Amortized calculations
+	- Offline tools:
+	- Informative articles:
+		1. Tips for new home buyers
+		2. What are the stuff associated with closing costs. 
+		3. Terminology and abbreviations (prep agent stuff)
