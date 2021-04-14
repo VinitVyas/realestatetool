@@ -1,0 +1,33 @@
+Note: This is the list of the basic calculators. This does not include the user-level features, like calculating BRRRR, rent calculations, etc.
+	1. Amortization numbers
+	2. Cash Flow
+	3. Discounted Cash Flow
+	4. Cash-on-cash return
+	5. Present value of future cash flow
+	6. GRM (Gross Rent Multiplier)
+	7. Gross Scheduled Income
+	8. Credit Loss due to Vacancy Rate
+	9. Gross Operating Income
+	10. Net Operating Income
+	11. Capitalization Rate
+	12. Net Income Multiplier
+	13. Taxable Income
+	14. Sale Proceeds
+	15. Net Present Value
+	16. Profitability Index
+	17. Internal Rate of Return
+	18. Price, income and expenses per unit
+	19. Price, income and expenses per sq ft.
+	20. Operating Expense Ratio
+	21. Debt Coverage Ratio
+	22. Break Even Ratio
+	23. Return on Equity
+	24. Loan to Value ratio
+	25. Mortgage Payment/Constant (including points)
+	26. Principal Payment/Balloon Payment
+	27. Principal and Interest per Period
+	28. Maximum Loan Amount
+	29. Property Taxes
+	30. Adjusted Basis
+	31. Depreciation
+	32. Gain on Sale
