@@ -1,0 +1,40 @@
+Phase 0: Basics
+	- Design arch is defined
+		○ FSM
+		○ Contract between modules
+		○ Unit testing defined
+		○ Debuggability defined
+	- Infrastructure is in place
+		○ Sharable using GIT
+		○ IDE is defined
+		○ UML plugin
+	- Atleast one module is functional using the design arch
+	- Data sharing is possible between modules.
+
+Phase 2: Offline
+	- All offline calculators are functional (list in a separate doc).
+	- Create an overarching set of 'features' that aggregate the various calculations in one place.
+
+Phase 03: Online 
+	- Parse Redfin and Zillow URLs (replace manual input with URL input).
+	- Excel plugin is functional
+		
+Phase 04: Complete package
+	- Add web crawlers for Redfin/Zillow. There are some crawlers implemented (https://github.com/wangff/RedfinCrawler) in the open source world, but they don't conform to the arch defined here. 
+	- Identify the other sites and design and implement parsers for them too.
+	- Start storing daily parsing done (csv/xlsx) by the bot to the cloud.
+
+Later phase:
+	- Make the app for a consumer. Package it via a website. 
+	- Make it scalable by having a server, even if at home.
+	- Design simplicity.
+		○ General UI should be clean.
+		○ Design and implement rent calculations.
+		○ Design suggestions if a number is unknown. See if this can be filled with the tool.
+
+Future enhancements:
+	- Implement an Android app using website as a backend. 
+	- Implement ML and AI w.r.t. analysis of properties on real estate sites.
+	- Plug in MLS sites too (if possible).
+	- Get feedback from established realtors/investors. 
+	- Listen to feedback from general users. 
