@@ -6,10 +6,10 @@
  * Contains definitions of public  APIs specific to the input state
  *
 '''
+
 from fsm.types.fsm_types import *
 from fsm.helpers.print_apis import *
-from fsm.states.input.impl import *
-
+from fsm.states.input.mechanics import *
 
 '''
  * @brief State process function
@@ -22,24 +22,6 @@ from fsm.states.input.impl import *
  * @return standardized status code
 '''
 def rental_fsm_input_process(machine, currEvent):
-    status = rental_fsm_machine.error_types.SM_NO_ERROR
-    next_state = rental_fsm_machine.rental_fsm_states.RENTAL_FSM_CAL;
-
-    # print("rental_fsm_input_process()")
-    # printEvent(currEvent)
-    # m = sharedM.getFSMObject()
-    # printState(m.currState)
-    # printState(machine.currState)
-
-    ipObj = sharedMemory_Input()
-    ip = ipObj.getInputObj()
-    errorStatus = ip.getInputFromUser()
-    # print("rental_fsm_input_process(): ipObj{}".format(ipObj))
-    # print("rental_fsm_input_process(): ip{}".format(ip))
-    if(errorStatus == False):
-        currEvent.event = event.rental_fsm_event.SUCCEEDED
-    else:
-        currEvent.event = event.rental_fsm_event.FAILED
-
-    return(status, next_state, currEvent.rental_fsm_event)
+    (status, next_state, eventVal) = process_input_state(machine, currEvent)
+    return(status, next_state, eventVal)
 

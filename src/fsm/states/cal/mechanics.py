@@ -9,6 +9,7 @@
 '''
 from fsm.types.fsm_types import *
 from fsm.helpers.print_apis import *
+from fsm.states.cal.impl import *
 
 '''
  * @brief Validate the next state for current state
@@ -59,6 +60,38 @@ def rental_fsm_cal_entry(machine, currEvent):
     status = rental_fsm_machine.error_types.SM_NO_ERROR
     machine.currState = rental_fsm_machine.rental_fsm_states.RENTAL_FSM_CAL;
     return status
+
+
+'''
+ * @brief State process function
+ *
+ * This function is the process function for current state. 
+ *
+ * @param machine - state machine identifier
+ * @param currEvent   - event class (includes the event and also its type)
+ *
+ * @return standardized status code
+'''
+def process_cal_state(machine, currEvent):
+    status = rental_fsm_machine.error_types.SM_NO_ERROR
+    eventVal = currEvent.rental_fsm_event
+    # print("process_cal_state()")
+
+    cObj = sharedMemory_Cal()
+    c = cObj.getCalObj()
+    errorStatus = c.calculate()
+    if(errorStatus == False):
+        currEvent.event = event.rental_fsm_event.SUCCEEDED
+        next_state = rental_fsm_machine.rental_fsm_states.RENTAL_FSM_PRINT;
+    else:
+        currEvent.event = event.rental_fsm_event.FAILED
+        next_state = rental_fsm_machine.rental_fsm_states.RENTAL_FSM_INPUT;
+
+    # m = sharedM.getFSMObject()
+    # printState(m.currState)
+    # printState(machine.currState)
+    # printEvent(currEvent)
+    return(status, next_state, eventVal)
 
 
 '''
