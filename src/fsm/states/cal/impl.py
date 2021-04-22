@@ -87,10 +87,11 @@ class calData():
         # Initialize the values
         self.initialize()
 
-        # 1. Calculate Monthly Earnings
+        # 1. Cash Flow
+        #    a. Calculate Monthly Earnings
         self.totalMonthlyEarnings   = self.i.monthlyRent + self.i.otherEarnings
 
-        # 2. Calculate Monthly Expenses
+        #    b. Calculate Monthly Expenses
         self.monthlyPAndI           = self.calculateMonthlyPrincipalAndInterest()
 
         self.addlFixedExpenses      = float(self.propertyTaxPerMonth + self.i.monthlyInsurance + self.i.hoa + self.i.pmiPerMonth)
@@ -106,21 +107,21 @@ class calData():
         # print("monthlyPAndI: ${}".format(self.monthlyPAndI))
         # print("totalMonthlyExpenses: ${}".format(self.totalMonthlyExpenses))
 
-        # 3. NOI
+        # 2. NOI
         self.noiMonthlyNoCapEx  = self.totalMonthlyEarnings - self.addlMonthlyExpenses + self.capExValueMonthly
         self.totalNOINoCapEx    = self.noiMonthlyNoCapEx * 12
         self.noiMonthly         = self.totalMonthlyEarnings - self.addlMonthlyExpenses
         self.totalNOI           = self.noiMonthly * 12
 
-        # 4. CoC Returns
+        # 3. CoC Returns
         self.totalInitialInvestment = self.i.dpValue + self.i.closingCost + self.i.rehabCost
         self.cocReturns         = float((self.cashFlowYearly * 100) / self.totalInitialInvestment)
 
-        # 5. Cap rates
+        # 4. Cap rates
         self.purchaseCapRate    = float((self.totalNOI * 100) / self.i.price)
         self.proFormaCapRate    = float(( (self.totalNOI - self.i.rehabCost ) * 100)  / self.i.price)
 
-        # 6. Gross Rent Multiplier
+        # 5. Gross Rent Multiplier
         self.grm                = float(self.i.price / self.i.annualRentEarnings)
 
         return errorStatus
