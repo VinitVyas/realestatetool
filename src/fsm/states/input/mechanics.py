@@ -48,7 +48,7 @@ def process_input_state(machine, currEvent):
     # printState(machine.currState)
 
     ipObj = sharedMemory_Input()
-    ip = ipObj.getInputObj()
+    ip = ipObj.getInputAPIsObj()
     errorStatus = ip.getInput()
     # print("rental_fsm_input_process(): ipObj{}".format(ipObj))
     # print("rental_fsm_input_process(): ip{}".format(ip))
