@@ -63,7 +63,7 @@ class inputData:
         self.expensesGrowth = 0.0
         self.salesExpenses  = 0.0
         
-    def debugModeValues(self):
+    def parseDebugModeValues(self):
         errorStatus = False
 
         # URL: https://www.zillow.com/homedetails/805-29th-St-APT-212-Boulder-CO-80303/13227452_zpid/
@@ -82,7 +82,7 @@ class inputData:
         self.closingCost = 6000
         self.rehabCost   = 0
         self.homeAppreciation = 8
-        # print("\n\n\t\tdebugModeValues(): price: ${}".format(self.price))
+        # print("\n\n\t\tparseDebugModeValues(): price: ${}".format(self.price))
 
         # Loan Details
         self.dpPercent   = 20
@@ -97,9 +97,9 @@ class inputData:
         self.otherEarnings  = 0
         self.annualGrowth   = 3
         self.annualRentEarnings  = float(self.monthlyRent * 12)
-        # print("\n\t\tdebugModeValues(): monthlyRent: ${}".format(self.monthlyRent))
-        # print("debugModeValues(): annualGrowth: ${}".format(self.annualGrowth))
-        # print("debugModeValues(): annualRentEarnings: ${}".format(self.annualRentEarnings))
+        # print("\n\t\tparseDebugModeValues(): monthlyRent: ${}".format(self.monthlyRent))
+        # print("parseDebugModeValues(): annualGrowth: ${}".format(self.annualGrowth))
+        # print("parseDebugModeValues(): annualRentEarnings: ${}".format(self.annualRentEarnings))
 
         # Expenses
         # HOA 
@@ -136,15 +136,9 @@ class inputData:
 
         return errorStatus
 
-    def getInputFromUser(self):
-        errorStatus = False
-        
-        # Enter debug mode for regular analysis
-        o = float(input("(1) Regular Mode or \n(2) Debug Mode\nOption: "))
-        if(o == 2):
-            errorStatus = self.debugModeValues()
-            return (errorStatus)
+    def getManualInput(self):
 
+        errorStatus = False
         print("\nEnter Home Details")
         self.streetAddr  = str(input("Enter Street Address: "))
         self.city        = str(input("City: "))
@@ -240,6 +234,23 @@ class inputData:
         self.salesExpenses  = float(input("Sales Expenses (How much will it cost to sell?) Enter value as a % of the final sale price (generally 7.5%): "))
 
         return errorStatus
+
+    def getInput(self):
+
+        errorStatus = False
+        # Enter debug mode for regular analysis
+        o = float(input("\nOptions:\n-> Enter Zillow URL or\n-> Enter '1' for Manual Mode \n-> Enter '2' for Debug Mode\nInput: "))
+        if (o == 1):
+            errorStatus = self.getManualInput()
+            return (errorStatus)
+        elif (o == 2):
+            errorStatus = self.parseDebugModeValues()
+            return (errorStatus)
+        #else
+            #errorStatus = self.parseUsingZillowURL(o)
+
+        return errorStatus
+
 
 class sharedMemory_Input:
     '''############### Class Variables ###############'''

@@ -26,6 +26,7 @@ class printData():
 
         print("|-------------------------------------------------------------------------------------------------|")
         print("\t\t\t   Home Details")
+        print("|-------------------------------------------------------------------------------------------------|")
         print("\t Address: \t\t\t{}".format(i.streetAddr))
         print("\t City: \t\t\t\t{}".format(i.city))
         print("\t State: \t\t\t{}".format(i.state))
@@ -33,7 +34,6 @@ class printData():
         print("\t Baths: \t\t\t{}".format(i.baths))
         print("\t Sq.ft: \t\t\t{}".format(i.sqft))
         print("\t Year Built: \t\t\t{}".format(i.yearBuilt))
-        print("|-------------------------------------------------------------------------------------------------|")
         print("\n\n")
 
         print("|-------------------------------------------------------------------------------------------------|")
@@ -77,7 +77,7 @@ class printData():
         print("\t\t\t\t CASH-ON-CASH RETURNS")
         print("|-------------------------------------------------------------------------------------------------|")
         print("Total Cash-on-Cash Returns (CoC): \t\t\t\t\t{:.2f}%".format(c.cocReturns))
-        print("\n")
+        print("\n\n")
 
         print("|-------------------------------------------------------------------------------------------------|")
         print("\t\t\t\t NET OPERATING INCOME")
@@ -86,20 +86,20 @@ class printData():
         print(" b. Net Operating Income (NOI) Without CapEx: \t\t${:.2f}".format(c.totalNOINoCapEx))
         print(" c. Monthly Net Operating Income (NOI): \t\t${:.2f}".format(c.noiMonthly))
         print(" d. Net Operating Income (NOI): \t\t\t${:.2f}\n".format(c.totalNOI))
-        print("\n")
+        print("\n\n")
 
         print("|-------------------------------------------------------------------------------------------------|")
         print("\t\t\t\t   CAP RATES")
         print("|-------------------------------------------------------------------------------------------------|")
         print(" a. Purchase Cap Rate: \t\t\t\t\t\t{:.2f}%".format(c.purchaseCapRate))
         print(" b. Pro-forma Cap Rate: \t\t\t\t\t{:.2f}%".format(c.proFormaCapRate))
-        print("\n")
+        print("\n\n")
 
         print("|-------------------------------------------------------------------------------------------------|")
         print("\t\t\t    GROSS RENT MULTIPLIER (GRM)")
         print("|-------------------------------------------------------------------------------------------------|")
         print("Gross Rent Multiplier (GRM): \t\t\t\t\t{:.2f}".format(c.grm))
-        print("\n")
+        print("\n\n")
 
         print("|-------------------------------------------------------------------------------------------------|")
         print("|\t\t\t\t\t END")

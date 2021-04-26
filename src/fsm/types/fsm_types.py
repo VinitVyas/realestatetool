@@ -98,7 +98,7 @@ class rental_fsm_machine:
         SM_PROCESS_ERROR        = 5
         # Add additional error states above this line
 
-        SM_NUM_ERROR_TYPES  = 6         # Number of error supported states
+        SM_NUM_ERROR_TYPES      = 6     # Number of error supported states
 
 
 '''
