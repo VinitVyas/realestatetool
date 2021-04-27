@@ -249,7 +249,7 @@ class inputDataAPIs:
 
         errorStatus = False
         # Enter debug mode for regular analysis
-        o = float(input("\nOptions:\n-> Enter Zillow URL or\n-> Enter '1' for Manual Mode \n-> Enter '2' for Debug Mode\nInput: "))
+        o = float(input("\nOptions:\n-> Enter '1' for Manual Mode \n-> Enter '2' for Debug Mode\nInput: "))
         if (o == 1):
             errorStatus = self.getManualInput()
             return (errorStatus)
