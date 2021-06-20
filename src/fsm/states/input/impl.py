@@ -79,31 +79,31 @@ class inputDataAPIs:
         # URL: https://www.zillow.com/homedetails/805-29th-St-APT-212-Boulder-CO-80303/13227452_zpid/
 
         # Home Details
-        self.input_data_object.streetAddr  = str("3009 Madison Ave APT 112M")
-        self.input_data_object.city        = str("Boulder")
-        self.input_data_object.state       = str("CO")
-        self.input_data_object.beds        = 2.0
-        self.input_data_object.baths       = 2.0
-        self.input_data_object.sqft        = 1102.0
-        self.input_data_object.yearBuilt   = 1969
+        self.input_data_object.streetAddr  = str("711 Sidepark St")
+        self.input_data_object.city        = str("Durham")
+        self.input_data_object.state       = str("NC")
+        self.input_data_object.beds        = 4.0
+        self.input_data_object.baths       = 2.5
+        self.input_data_object.sqft        = 2004.0
+        self.input_data_object.yearBuilt   = 2013
 
         # Purchase Details
-        self.input_data_object.price       = 300000
+        self.input_data_object.price       = 350000
         self.input_data_object.closingCost = 6000
         self.input_data_object.rehabCost   = 0
-        self.input_data_object.homeAppreciation = 8
+        self.input_data_object.homeAppreciation = 10
         # print("\n\n\t\tparseDebugModeValues(): price: ${}".format(self.input_data_object.price))
 
         # Loan Details
-        self.input_data_object.dpPercent   = 20
+        self.input_data_object.dpPercent   = 10
         self.input_data_object.dpValue     = float((self.input_data_object.price * self.input_data_object.dpPercent)/100)
-        self.input_data_object.interest    = 3.0
+        self.input_data_object.interest    = 3.062
         self.input_data_object.loanTerm    = 30
         self.input_data_object.loanTermMonths = self.input_data_object.loanTerm * 12
-        self.input_data_object.pmiPerMonth = 0
+        self.input_data_object.pmiPerMonth = 45
 
         # Rental Income Details
-        self.input_data_object.monthlyRent    = 1750
+        self.input_data_object.monthlyRent    = 1950
         self.input_data_object.otherEarnings  = 0
         self.input_data_object.annualGrowth   = 3
         self.input_data_object.annualRentEarnings  = float(self.input_data_object.monthlyRent * 12)
@@ -113,19 +113,19 @@ class inputDataAPIs:
 
         # Expenses
         # HOA 
-        self.input_data_object.hoa     = 400
+        self.input_data_object.hoa     = 92
         # Insurance
-        self.input_data_object.monthlyInsurance = 150
+        self.input_data_object.monthlyInsurance = 70
         # Property Taxes
-        self.input_data_object.propertyTaxValue   = 2232
+        self.input_data_object.propertyTaxValue   = 2400
         self.input_data_object.propertyTaxPercent = float((self.input_data_object.propertyTaxValue * 100)/self.input_data_object.price)
         # Repairs and Maintenance
-        self.input_data_object.rnmPercent = 5
+        self.input_data_object.rnmPercent = 0
         self.input_data_object.rnmValue   = float((self.input_data_object.annualRentEarnings * self.input_data_object.rnmPercent)/100)
         # Vacancy Rate
-        self.input_data_object.vacancyRate = 3
+        self.input_data_object.vacancyRate = 0
         # Capital Expenditures
-        self.input_data_object.capEx       = 5
+        self.input_data_object.capEx       = 0
         # Management Fees
         self.input_data_object.pmPercent = 0
         self.input_data_object.pmValue   = float((self.input_data_object.annualRentEarnings * self.input_data_object.pmPercent)/100)
