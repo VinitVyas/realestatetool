@@ -28,6 +28,8 @@ class calData():
         self.cashFlow               = 0.0
         self.cashFlowYearly         = 0.0
         self.totalMonthlyEarnings   = 0.0
+        self.grossOperatingIncomeMon= 0.0
+        self.grossOperatingIncome   = 0.0
         self.noiMonthlyNoCapEx      = 0.0
         self.totalNOINoCapEx        = 0.0
         self.noiMonthly             = 0.0
@@ -107,21 +109,25 @@ class calData():
         # print("monthlyPAndI: ${}".format(self.monthlyPAndI))
         # print("totalMonthlyExpenses: ${}".format(self.totalMonthlyExpenses))
 
-        # 2. NOI
+        # 2. Gross Operating Income
+        self.grossOperatingIncomeMon    = self.totalMonthlyEarnings - self.vacancyValueMonthly
+        self.grossOperatingIncome       = self.grossOperatingIncomeMon * 12
+
+        # 3. NOI
         self.noiMonthlyNoCapEx  = self.totalMonthlyEarnings - self.addlMonthlyExpenses + self.capExValueMonthly
         self.totalNOINoCapEx    = self.noiMonthlyNoCapEx * 12
         self.noiMonthly         = self.totalMonthlyEarnings - self.addlMonthlyExpenses
         self.totalNOI           = self.noiMonthly * 12
 
-        # 3. CoC Returns
-        self.totalInitialInvestment = self.i.dpValue + self.i.closingCost + self.i.rehabCost
+        # 4. CoC Returns
+        self.totalInitialInvestment = self.i.dpValue + self.i.closingCost + self.i.rehabCost + self.i.gapPayment
         self.cocReturns         = float((self.cashFlowYearly * 100) / self.totalInitialInvestment)
 
-        # 4. Cap rates
-        self.purchaseCapRate    = float((self.totalNOI * 100) / self.i.price)
-        self.proFormaCapRate    = float(( (self.totalNOI - self.i.rehabCost ) * 100)  / self.i.price)
+        # 5. Cap rates
+        self.purchaseCapRate    = float((self.totalNOI / (self.i.price + self.i.gapPayment)) * 100)
+        self.proFormaCapRate    = float(( (self.totalNOI - self.i.rehabCost)  / (self.i.price + self.i.gapPayment) * 100))
 
-        # 5. Gross Rent Multiplier
+        # 6. Gross Rent Multiplier
         self.grm                = float(self.i.price / self.i.annualRentEarnings)
 
         return errorStatus

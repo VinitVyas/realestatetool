@@ -28,6 +28,7 @@ class inputData:
         self.price       = 0.0
         self.closingCost = 0.0
         self.rehabCost   = 0.0
+        self.gapPayment  = 0.0
         self.homeAppreciation = 0.0
         
         # Loan Details
@@ -91,6 +92,7 @@ class inputDataAPIs:
         self.input_data_object.price       = 350000
         self.input_data_object.closingCost = 6000
         self.input_data_object.rehabCost   = 0
+        self.input_data_object.gapPayment  = 32000
         self.input_data_object.homeAppreciation = 10
         # print("\n\n\t\tparseDebugModeValues(): price: ${}".format(self.input_data_object.price))
 
@@ -163,6 +165,7 @@ class inputDataAPIs:
         self.input_data_object.price       = float(input("Enter Listed Home Price: $"))
         self.input_data_object.closingCost = float(input("Enter Closing Costs: $"))
         self.input_data_object.rehabCost   = float(input("Enter Rehab Costs: $"))
+        self.input_data_object.gapPayment  = float(input("Enter Gap Payment ($0 unless Purchase Price exceeds Listing Price): $"))
         self.input_data_object.homeAppreciation = float(input("Home Appreciation (in %): "))
 
 
