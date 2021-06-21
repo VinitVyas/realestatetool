@@ -102,7 +102,7 @@ class inputDataAPIs:
         self.input_data_object.interest    = 3.062
         self.input_data_object.loanTerm    = 30
         self.input_data_object.loanTermMonths = self.input_data_object.loanTerm * 12
-        self.input_data_object.pmiPerMonth = 45
+        self.input_data_object.pmiPerMonth = 44
 
         # Rental Income Details
         self.input_data_object.monthlyRent    = 1950
