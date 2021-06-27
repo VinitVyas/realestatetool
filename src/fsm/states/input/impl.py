@@ -77,7 +77,7 @@ class inputDataAPIs:
     def parseDebugModeValues(self):
         errorStatus = False
 
-        # URL: https://www.zillow.com/homedetails/805-29th-St-APT-212-Boulder-CO-80303/13227452_zpid/
+        # URL: https://www.zillow.com/homedetails/711-Sidepark-St-Durham-NC-27703/119253992_zpid/
 
         # Home Details
         self.input_data_object.streetAddr  = str("711 Sidepark St")
@@ -89,20 +89,20 @@ class inputDataAPIs:
         self.input_data_object.yearBuilt   = 2013
 
         # Purchase Details
-        self.input_data_object.price       = 350000
+        self.input_data_object.price       = 360000
         self.input_data_object.closingCost = 6000
         self.input_data_object.rehabCost   = 0
-        self.input_data_object.gapPayment  = 32000
+        self.input_data_object.gapPayment  = 22000
         self.input_data_object.homeAppreciation = 10
         # print("\n\n\t\tparseDebugModeValues(): price: ${}".format(self.input_data_object.price))
 
         # Loan Details
         self.input_data_object.dpPercent   = 10
         self.input_data_object.dpValue     = float((self.input_data_object.price * self.input_data_object.dpPercent)/100)
-        self.input_data_object.interest    = 3.062
+        self.input_data_object.interest    = 2.99
         self.input_data_object.loanTerm    = 30
         self.input_data_object.loanTermMonths = self.input_data_object.loanTerm * 12
-        self.input_data_object.pmiPerMonth = 44
+        self.input_data_object.pmiPerMonth = 51.57
 
         # Rental Income Details
         self.input_data_object.monthlyRent    = 1950
@@ -117,9 +117,9 @@ class inputDataAPIs:
         # HOA 
         self.input_data_object.hoa     = 92
         # Insurance
-        self.input_data_object.monthlyInsurance = 70
+        self.input_data_object.monthlyInsurance = 59.752
         # Property Taxes
-        self.input_data_object.propertyTaxValue   = 2400
+        self.input_data_object.propertyTaxValue   = 3504.84
         self.input_data_object.propertyTaxPercent = float((self.input_data_object.propertyTaxValue * 100)/self.input_data_object.price)
         # Repairs and Maintenance
         self.input_data_object.rnmPercent = 0
