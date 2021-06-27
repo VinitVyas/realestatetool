@@ -77,10 +77,10 @@ class inputDataAPIs:
     def parseDebugModeValues(self):
         errorStatus = False
 
-        # URL: https://www.zillow.com/homedetails/711-Sidepark-St-Durham-NC-27703/119253992_zpid/
+        # URL: https://www.zillow.com/homedetails/725-Sidepark-St-Durham-NC-27703/119253992_zpid/
 
         # Home Details
-        self.input_data_object.streetAddr  = str("711 Sidepark St")
+        self.input_data_object.streetAddr  = str("725 Sidepark St")
         self.input_data_object.city        = str("Durham")
         self.input_data_object.state       = str("NC")
         self.input_data_object.beds        = 4.0
@@ -89,15 +89,15 @@ class inputDataAPIs:
         self.input_data_object.yearBuilt   = 2013
 
         # Purchase Details
-        self.input_data_object.price       = 360000
+        self.input_data_object.price       = 350000
         self.input_data_object.closingCost = 6000
         self.input_data_object.rehabCost   = 0
-        self.input_data_object.gapPayment  = 22000
+        self.input_data_object.gapPayment  = 10000
         self.input_data_object.homeAppreciation = 10
         # print("\n\n\t\tparseDebugModeValues(): price: ${}".format(self.input_data_object.price))
 
         # Loan Details
-        self.input_data_object.dpPercent   = 10
+        self.input_data_object.dpPercent   = 20
         self.input_data_object.dpValue     = float((self.input_data_object.price * self.input_data_object.dpPercent)/100)
         self.input_data_object.interest    = 2.99
         self.input_data_object.loanTerm    = 30
@@ -105,7 +105,7 @@ class inputDataAPIs:
         self.input_data_object.pmiPerMonth = 51.57
 
         # Rental Income Details
-        self.input_data_object.monthlyRent    = 1950
+        self.input_data_object.monthlyRent    = 2150
         self.input_data_object.otherEarnings  = 0
         self.input_data_object.annualGrowth   = 3
         self.input_data_object.annualRentEarnings  = float(self.input_data_object.monthlyRent * 12)

@@ -1,11 +1,9 @@
 Background:
-There are many ways to earn using real estate like flipping homes, long term appreciation or even REITs. The aim is to create an income source using investing for renting. Home appreciation and flipping are a part of the equation, but are not the primary aim. 
+There are many ways to earn using real estate like flipping homes, long term appreciation or even REITs.
 
-The issue with any home purchase is the emotional aspect. As thought of generally, it is not desirable, or even something reliable, especially because we have not done enough deals to get any intuition about it. It must always be treated as a problem. The best way to negate it is by doing the calculations that affirm the desirability. Any decision can be made thereafter. 
+The aim of this project is to provide all the calculations associated with a property thereby illustrating all the pros and cons, atleast as many as can be ascertained through numbers. 
 
-The aim of this project is to provide all the calculations associated with a property thereby illustrating all the pros and cons, atleast as many as can be ascertained. 
-
-Now that we've established that, this means that analyzing any property is the most important step. And there are many calculators online that help with this. But none of them, I believe, are comprehensive enough. 
+There are many calculators online that help with this. But none of them, I believe, are comprehensive enough. 
 
 
 

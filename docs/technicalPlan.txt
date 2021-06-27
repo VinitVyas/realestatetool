@@ -11,7 +11,7 @@ Phase 0: Basics
 	- Atleast one module is functional using the design arch
 	- Data sharing is possible between modules.
 
-Phase 2: Offline
+Phase 02: Offline
 	- All offline calculators are functional (list in a separate doc).
 	- Create an overarching set of 'features' that aggregate the various calculations in one place.
 
